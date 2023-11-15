@@ -1,9 +1,6 @@
 import os
 import csv
 
-# Path to collect data from the Resources folder
-budget_data = os.path.join('Resources','budget_data.csv')
-
 #set variables
 totalmonths = 0
 totalPL = 0
@@ -12,38 +9,41 @@ profitloss = []
 greatestincrease = 0
 greatestdecrease = 0
 
+# Path to collect data from the Resources folder
+csvpath = os.path.join('Resources', 'budget_data.csv')
+
 # open file and read, store contents as text
-with open(budget_data) as csvfile:
+with open(csvpath) as csvfile:
 
     #store reference to file and set comma to indicate new row
-    csvreader = csv.reader(csvfile, delimiter=',')
+    budget_data = csv.reader(csvfile, delimiter=',')
 
     # skip the header row
-    header = next(csvreader)
-    print(csvreader)
+    budget_header = next(budget_data)
 
     #Begin output
     print("Financial Analysis")
     print("---------------------------")
 
-    # The total number of months included in the dataset
-    # The net total amount of "Profit/Losses" over the entire period      
-    # The average of the changes in "Profit/Losses" over the entire period
-    for row in csvreader:
-        # turn date and pl column into list
-        date.append(row[0])
-        profitloss.append(float(row[1]))
-        
-        #counter for number of lines
-        totalmonths += 1
-        # csv column sum
-        totalPL += (int(row[1]))
-        #got help from Wei on this equation below
-        avgpl = (int(profitloss[0])- int(profitloss[85]))/85
-
-        # zip appended lists together to create tuple to perform max/min features on
-        greatestincrease = max(ziplist, key =lambda x:x[1])
-        greatestdecrease = min(ziplist,key =lambda x:x[1])
+     # as reading data calculate
+    for row in budget_data:
+        # the total number of months included in the data set
+        total_month += 1
+        # change in profit and record it in next column
+        change_profit = int(row[1])-profit
+        profit = int(row[1])
+        # total profit for the data set
+        total_profit += profit
+        # total change in profit 
+        total_change += change_profit
+        # identify maximum increase in profit
+        if change_profit > max_change:
+            max_change = change_profit
+            max_month = str(row[0])
+        # identify the maximum decrease in profit
+        if change_profit < min_change:
+            min_change = change_profit
+            min_month = str(row[0])
        
     print("Total Months: " + str(totalmonths))    
     print('Total Net Profit/Losses: $' + str(totalPL))
