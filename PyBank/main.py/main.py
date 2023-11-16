@@ -47,18 +47,18 @@ with open(file_path, 'r') as csvfile:
     print("---------------------------")
     print(f"Total Months: {total_months}")
     print(f"Total: ${total_profit:,.2f}")
-    print(f"Average Revenue Change: ${avg_revenue_change:,.2f}")
-    print(f"Greatest Increase in Profits: {months_list[max_increase_index]} ${profit_change_list[max_increase_index]:,.2f}")
-    print(f"Greatest Decrease in Profits: {months_list[max_decrease_index]} ${profit_change_list[max_decrease_index]:,.2f}")
+    print(f"Average Revenue Change: ${avg_revenue_change:.2f}")
+    print(f"Greatest Increase in Profits: {months_list[max_increase_index]} ${profit_change_list[max_increase_index]:.2f}")
+    print(f"Greatest Decrease in Profits: {months_list[max_decrease_index]} ${profit_change_list[max_decrease_index]:.2f}")
 
     # Write the results to a text file
     output_path = os.path.join("analysis", "PyBank.txt")
 with open(output_path, 'w') as file:
     file.write("Financial Analysis\n")
     file.write("---------------------\n")
-    file.write(f"Total Months:  {total_months}\n")
-    file.write(f"Total: $  {total_profit}\n")
-    file.write(f"Average Change:  {avg_revenue_change}\n")
-    file.write(f"Greatest Increase in Profits:   {months_list[max_increase_index]} ${profit_change_list[max_increase_index]:,.2f}\n")
-    file.write(f"Greatest Decrease in Profits:   {months_list[max_decrease_index]} ${profit_change_list[max_decrease_index]:,.2f}")
+    file.write(f"Total Months: {total_months}\n")
+    file.write(f"Total: ${total_profit}\n")
+    file.write(f"Average Change: ${avg_revenue_change}\n")
+    file.write(f"Greatest Increase in Profits: {months_list[max_increase_index]} ${profit_change_list[max_increase_index]:,.2f}\n")
+    file.write(f"Greatest Decrease in Profits: {months_list[max_decrease_index]} ${profit_change_list[max_decrease_index]:,.2f}")
 
