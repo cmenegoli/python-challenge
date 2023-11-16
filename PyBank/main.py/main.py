@@ -47,7 +47,7 @@ with open(file_path, 'r') as csvfile:
     print("----------------------------")
     print(f"Total Months: {total_months}")
     print(f"Total: ${total_profit:,.2f}")
-    print(f"Average Revenue Change: ${avg_revenue_change:.1f}")
+    print(f"Average Revenue Change: ${avg_revenue_change:.0f}")
     print(f"Greatest Increase in Profits: {months_list[max_increase_index]} ${profit_change_list[max_increase_index]:.0f}")
     print(f"Greatest Decrease in Profits: {months_list[max_decrease_index]} ${profit_change_list[max_decrease_index]:.0f}")
 
