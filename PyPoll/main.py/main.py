@@ -13,7 +13,7 @@ elected_count = 0
 
 #Read the input file
 
-with open(input_file) as votes_rollup:
+with open(input_file, 'r') as votes_rollup:
 
     reader = csv.reader(votes_rollup)
 
