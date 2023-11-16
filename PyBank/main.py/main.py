@@ -58,7 +58,7 @@ with open(output_path, 'w') as file:
     file.write("----------------------------\n")
     file.write(f"Total Months: {total_months}\n")
     file.write(f"Total: ${total_profit}\n")
-    file.write(f"Average Change: ${avg_revenue_change}\n")
+    file.write(f"Average Change: ${avg_revenue_change:.0f}\n")
     file.write(f"Greatest Increase in Profits: {months_list[max_increase_index]} (${profit_change_list[max_increase_index]:.0f})\n")
     file.write(f"Greatest Decrease in Profits: {months_list[max_decrease_index]} (${profit_change_list[max_decrease_index]:.0f})")
 
