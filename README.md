@@ -1,5 +1,6 @@
-PyBank Instructions:
+In this challenge, I used VS Code/ Python to write the code. I worked with my peers to debug the code as well as had help from a tutoring session and the BootCamp TA(s). The Slack channel was extremely helpful throughout my process. I pasted the instructions from BootCamp Spot for guidance below.
 
+PyBank Instructions:
 
 In this Challenge, you are tasked with creating a Python script to analyze the financial records of your company. You will be given a financial dataset called budget_data.csv. The dataset is composed of two columns: "Date" and "Profit/Losses".
 
